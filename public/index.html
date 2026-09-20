@@ -32,7 +32,7 @@ Rules:
 [{"question":"...","options":["...","...","...","..."],"correct_index":0,"explanation":"...","topic":"..."}]`;
 
 async function callClaude(system, userContent) {
-  const response = await fetch("/api/claude", {
+  const response = await fetch("/.netlify/functions/claude-proxy", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
